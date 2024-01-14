@@ -17,6 +17,10 @@
 		3AF67A7925A64DBF00D360A7 /* VideoPlayerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A7825A64DBF00D360A7 /* VideoPlayerSwiftUIUITests.swift */; };
 		56B420CD2B5492AE00A549FC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420CC2B5492AE00A549FC /* APIRequest.swift */; };
 		56B420CF2B5492D900A549FC /* DataRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420CE2B5492D900A549FC /* DataRequest+Extension.swift */; };
+		56B420D22B54944800A549FC /* VideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420D12B54944800A549FC /* VideoResponse.swift */; };
+		56B420D42B5494BE00A549FC /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420D32B5494BE00A549FC /* VideoRepository.swift */; };
+		56B420D72B5494E400A549FC /* VideoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420D62B5494E400A549FC /* VideoRepositoryProtocol.swift */; };
+		56B420DA2B54955100A549FC /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420D92B54955100A549FC /* VideoEntity.swift */; };
 		AE49651B2FB044A9D9C9A4A2 /* Pods_VideoPlayerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1718793C92A158CD274D415 /* Pods_VideoPlayerSwiftUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +59,10 @@
 		40F16EA03E5321D9F9C4B905 /* Pods_VideoPlayerSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayerSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B420CC2B5492AE00A549FC /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		56B420CE2B5492D900A549FC /* DataRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extension.swift"; sourceTree = "<group>"; };
+		56B420D12B54944800A549FC /* VideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponse.swift; sourceTree = "<group>"; };
+		56B420D32B5494BE00A549FC /* VideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
+		56B420D62B5494E400A549FC /* VideoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepositoryProtocol.swift; sourceTree = "<group>"; };
+		56B420D92B54955100A549FC /* VideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntity.swift; sourceTree = "<group>"; };
 		7107EDDB04EDFD99E0BAA96A /* Pods-VideoPlayerSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayerSwiftUITests/Pods-VideoPlayerSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9950FBB181E7249F3206851D /* Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests/Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D21DA57CA639678FD976F21 /* Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests/Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +181,8 @@
 		56B420C62B54911600A549FC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				56B420D02B54943800A549FC /* Models */,
+				56B420D32B5494BE00A549FC /* VideoRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -180,6 +190,8 @@
 		56B420C72B54911D00A549FC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				56B420D82B54954200A549FC /* Entity */,
+				56B420D52B5494C500A549FC /* Protocols */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -215,6 +227,30 @@
 				56B420CE2B5492D900A549FC /* DataRequest+Extension.swift */,
 			);
 			path = "DataRequest+Extension";
+			sourceTree = "<group>";
+		};
+		56B420D02B54943800A549FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56B420D12B54944800A549FC /* VideoResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56B420D52B5494C500A549FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				56B420D62B5494E400A549FC /* VideoRepositoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		56B420D82B54954200A549FC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				56B420D92B54955100A549FC /* VideoEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		58EAF0791B64B3D3A25CB947 /* Pods */ = {
@@ -477,10 +513,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B420DA2B54955100A549FC /* VideoEntity.swift in Sources */,
+				56B420D22B54944800A549FC /* VideoResponse.swift in Sources */,
 				3AF67A5E25A64DBD00D360A7 /* ContentView.swift in Sources */,
 				56B420CF2B5492D900A549FC /* DataRequest+Extension.swift in Sources */,
+				56B420D42B5494BE00A549FC /* VideoRepository.swift in Sources */,
 				56B420CD2B5492AE00A549FC /* APIRequest.swift in Sources */,
 				3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */,
+				56B420D72B5494E400A549FC /* VideoRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
