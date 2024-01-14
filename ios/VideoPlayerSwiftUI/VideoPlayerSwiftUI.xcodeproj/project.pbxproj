@@ -27,6 +27,7 @@
 		56B420E82B549BEB00A549FC /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420E72B549BEB00A549FC /* NavigationView.swift */; };
 		56B420EB2B549DCF00A549FC /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420EA2B549DCF00A549FC /* VideoPlayerView.swift */; };
 		56B420ED2B549E4800A549FC /* AVPlayerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420EC2B549E4800A549FC /* AVPlayerUseCase.swift */; };
+		56B420EF2B54A20300A549FC /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B420EE2B54A20300A549FC /* MarkdownView.swift */; };
 		AE49651B2FB044A9D9C9A4A2 /* Pods_VideoPlayerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1718793C92A158CD274D415 /* Pods_VideoPlayerSwiftUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		56B420E72B549BEB00A549FC /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		56B420EA2B549DCF00A549FC /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		56B420EC2B549E4800A549FC /* AVPlayerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerUseCase.swift; sourceTree = "<group>"; };
+		56B420EE2B54A20300A549FC /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		7107EDDB04EDFD99E0BAA96A /* Pods-VideoPlayerSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayerSwiftUITests/Pods-VideoPlayerSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9950FBB181E7249F3206851D /* Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests/Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D21DA57CA639678FD976F21 /* Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests/Pods-VideoPlayerSwiftUI-VideoPlayerSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				56B420EA2B549DCF00A549FC /* VideoPlayerView.swift */,
+				56B420EE2B54A20300A549FC /* MarkdownView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				56B420DA2B54955100A549FC /* VideoEntity.swift in Sources */,
 				56B420ED2B549E4800A549FC /* AVPlayerUseCase.swift in Sources */,
 				56B420EB2B549DCF00A549FC /* VideoPlayerView.swift in Sources */,
+				56B420EF2B54A20300A549FC /* MarkdownView.swift in Sources */,
 				56B420D22B54944800A549FC /* VideoResponse.swift in Sources */,
 				56B420E42B549B3300A549FC /* VideoUseCaseProtocol.swift in Sources */,
 				56B420E02B54994700A549FC /* HomeViewModel.swift in Sources */,

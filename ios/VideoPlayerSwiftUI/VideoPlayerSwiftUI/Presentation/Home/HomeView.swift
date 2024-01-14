@@ -34,6 +34,34 @@ struct HomeView: View {
         Group {
             VideoPlayerView(player: viewModel.player)
                 .frame(height: 300)
+
+            detailView(
+                videoTitle: videoData.title,
+                authorName: videoData.author.name,
+                videoDescription: videoData.description
+            )
+        }
+    }
+
+    private func detailView(
+        videoTitle: String,
+        authorName: String,
+        videoDescription: String
+    ) -> some View {
+        ScrollView {
+            VStack(alignment: .leading) {
+                Text(videoTitle)
+                    .font(.title)
+
+                Text(authorName)
+                    .font(.subheadline)
+
+                MarkdownView(markdownText: videoDescription)
+                    .font(.body)
+                    .padding(.top)
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
         }
     }
 }
