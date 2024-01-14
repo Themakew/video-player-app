@@ -14,8 +14,12 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             Group {
-                if let videoData = viewModel.selectedVideoData {
-                    Text(videoData.title)
+                if let videoData = viewModel.currentVideoData {
+                    VStack {
+                        videoContentView(videoData)
+                    }
+                } else {
+                    Text("Loading...")
                 }
             }
             .navigationBarTitle("Video Player", displayMode: .inline)
@@ -25,4 +29,15 @@ struct HomeView: View {
             await viewModel.loadData()
         }
     }
+
+    private func videoContentView(_ videoData: VideoEntity) -> some View {
+        Group {
+            VideoPlayerView(player: viewModel.player)
+                .frame(height: 300)
+        }
+    }
+}
+
+#Preview {
+    HomeView(viewModel: HomeViewModel(VideoUseCase(VideoRepository(APIRequest())), AVPlayerUseCase()))
 }

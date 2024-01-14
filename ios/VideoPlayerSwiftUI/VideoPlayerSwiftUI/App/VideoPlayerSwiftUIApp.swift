@@ -18,8 +18,9 @@ struct VideoPlayerSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             let videoRepository = VideoRepository(apiService)
+            let playerUseCase = AVPlayerUseCase()
             let videoUseCase = VideoUseCase(videoRepository)
-            let viewModel = HomeViewModel(videoUseCase)
+            let viewModel = HomeViewModel(videoUseCase, playerUseCase)
 
             HomeView(viewModel: viewModel)
         }
