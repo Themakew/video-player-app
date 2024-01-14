@@ -112,10 +112,12 @@
 		3AF67A5A25A64DBD00D360A7 /* VideoPlayerSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */,
-				3AF67A5D25A64DBD00D360A7 /* ContentView.swift */,
-				3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */,
-				3AF67A6425A64DBF00D360A7 /* Info.plist */,
+				56B420C42B5490E900A549FC /* App */,
+				56B420C52B54910600A549FC /* Infrastructure */,
+				56B420C62B54911600A549FC /* Data */,
+				56B420C72B54911D00A549FC /* Domain */,
+				56B420C82B54912400A549FC /* Presentation */,
+				56B420C92B54913000A549FC /* Resources */,
 				3AF67A6125A64DBF00D360A7 /* Preview Content */,
 			);
 			path = VideoPlayerSwiftUI;
@@ -145,6 +147,52 @@
 				3AF67A7A25A64DBF00D360A7 /* Info.plist */,
 			);
 			path = VideoPlayerSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		56B420C42B5490E900A549FC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		56B420C52B54910600A549FC /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		56B420C62B54911600A549FC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		56B420C72B54911D00A549FC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56B420C82B54912400A549FC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3AF67A5D25A64DBD00D360A7 /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		56B420C92B54913000A549FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3AF67A6425A64DBF00D360A7 /* Info.plist */,
+				3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		58EAF0791B64B3D3A25CB947 /* Pods */ = {
@@ -569,7 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VideoPlayerSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = VideoPlayerSwiftUI/Info.plist;
+				INFOPLIST_FILE = VideoPlayerSwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VideoPlayerSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = VideoPlayerSwiftUI/Info.plist;
+				INFOPLIST_FILE = VideoPlayerSwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
