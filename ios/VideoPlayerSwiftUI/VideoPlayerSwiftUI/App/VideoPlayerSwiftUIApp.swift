@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct VideoPlayerSwiftUIApp: App {
+    let apiService = APIRequest()
 
     init() {
         UIView.appearance().overrideUserInterfaceStyle = .light
@@ -16,7 +17,11 @@ struct VideoPlayerSwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let videoRepository = VideoRepository(apiService)
+            let videoUseCase = VideoUseCase(videoRepository)
+            let viewModel = HomeViewModel(videoUseCase)
+
+            HomeView(viewModel: viewModel)
         }
     }
 }

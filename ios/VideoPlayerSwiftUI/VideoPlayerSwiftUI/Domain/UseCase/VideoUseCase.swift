@@ -5,11 +5,7 @@
 //  Created by Ruyther Costa on 2024-01-14.
 //
 
-protocol VideoUseCaseProtocol {
-    var selectedVideoData: VideoEntity? { get }
-}
-
-final class ViewUseCase: VideoUseCaseProtocol {
+final class VideoUseCase: VideoUseCaseProtocol {
     var selectedVideoData: VideoEntity?
 
     enum VideoError: Error {
