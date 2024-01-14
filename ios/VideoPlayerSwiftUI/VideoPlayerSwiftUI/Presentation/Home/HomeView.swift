@@ -18,6 +18,8 @@ struct HomeView: View {
                     Text(videoData.title)
                 }
             }
+            .navigationBarTitle("Video Player", displayMode: .inline)
+            .customNavigationBar(backgroundColor: .black, textColor: .white)
         }
         .task {
             await viewModel.loadData()
