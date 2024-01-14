@@ -11,13 +11,16 @@ import SwiftUI
 protocol HomeViewModelProtocol {
     var currentVideoData: VideoEntity? { get set }
     var player: AVPlayer { get set }
+    var isPlaying: Bool { get set }
 
     func loadData() async
+    func togglePlayPause()
 }
 
 @Observable final class HomeViewModel: HomeViewModelProtocol {
     var currentVideoData: VideoEntity?
     var player: AVPlayer
+    var isPlaying = false
 
     private let videoUseCase: VideoUseCaseProtocol
     private let playerUseCase: AVPlayerUseCaseProtocol
@@ -36,6 +39,8 @@ protocol HomeViewModelProtocol {
         do {
             let videoData = try await videoUseCase.getVideoData()
             self.currentVideoData = videoData
+
+            updateViewPlayer()
         } catch {
             print("Error: \(error)")
         }
@@ -45,5 +50,10 @@ protocol HomeViewModelProtocol {
         if let url = currentVideoData?.hlsURL {
             playerUseCase.updatePlayerURL(url)
         }
+    }
+
+    func togglePlayPause() {
+        playerUseCase.togglePlayPause()
+        isPlaying = playerUseCase.isPlaying
     }
 }
