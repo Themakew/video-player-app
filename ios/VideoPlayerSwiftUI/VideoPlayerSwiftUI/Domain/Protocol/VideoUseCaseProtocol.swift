@@ -9,4 +9,8 @@ protocol VideoUseCaseProtocol {
     var selectedVideoData: VideoEntity? { get }
 
     func getVideoData() async throws -> VideoEntity
+    func goToPreviousVideo()
+    func goToNextVideo()
+    func canGoToPrevious() -> Bool
+    func canGoToNext() -> Bool
 }

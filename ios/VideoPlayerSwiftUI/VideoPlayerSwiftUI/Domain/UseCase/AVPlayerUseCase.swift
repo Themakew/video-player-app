@@ -37,4 +37,10 @@ final class AVPlayerUseCase: AVPlayerUseCaseProtocol {
             isPlaying = true
         }
     }
+
+    func pausePlayer() {
+        if isPlaying {
+            player.pause()
+        }
+    }
 }

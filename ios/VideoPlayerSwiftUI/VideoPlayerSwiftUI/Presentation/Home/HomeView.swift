@@ -49,25 +49,28 @@ struct HomeView: View {
 
     private func videoControls() -> some View {
         HStack(alignment: .center, spacing: 24) {
-            Button(action: {
-                viewModel.togglePlayPause()
-            }, label: {
-                ZStack(alignment: .center) {
-                    Circle()
-                        .fill(.white.opacity(0.7))
-                        .frame(width: 80, height: 80)
-                        .shadow(radius: 10)
-                        .overlay {
-                            Circle()
-                                .stroke(lineWidth: 1.0)
-                                .foregroundStyle(.black)
-                        }
+            ControlButtonView(
+                isEnabled: $viewModel.isPreviousButtonDisabled,
+                defaultButtonIconName: "previous"
+            ) {
+                // TODO
+            }
 
-                    Image("play")
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                }
-            })
+            ControlButtonView(
+                isSelectedAppearanceEnabled: $viewModel.isPlaying,
+                selectedButtonIconName: "pause",
+                size: .larger,
+                defaultButtonIconName: "play"
+            ) {
+                viewModel.togglePlayPause()
+            }
+
+            ControlButtonView(
+                isEnabled: $viewModel.isNextButtonDisabled,
+                defaultButtonIconName: "next"
+            ) {
+                // TODO
+            }
         }
     }
 

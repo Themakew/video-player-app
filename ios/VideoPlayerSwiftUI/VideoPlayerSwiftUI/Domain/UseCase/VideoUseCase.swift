@@ -12,6 +12,9 @@ final class VideoUseCase: VideoUseCaseProtocol {
         case noVideosAvailable
     }
 
+    private var videoList = [VideoEntity]()
+    private var selectedVideoIndex = 0
+
     private let videoRepository: VideoRepositoryProtocol
 
     init(_ videoRepository: VideoRepositoryProtocol) {
@@ -20,12 +23,38 @@ final class VideoUseCase: VideoUseCaseProtocol {
 
     func getVideoData() async throws -> VideoEntity {
         let videoDataResponse = try await videoRepository.getVideoList()
-        let dataListSortedByTheOldest = videoDataResponse.sorted { $0.publishedAt < $1.publishedAt }
+        let dataList = videoDataResponse.sorted { $0.publishedAt < $1.publishedAt }
 
-        guard let oldestVideoObject = dataListSortedByTheOldest.first else {
+        videoList = dataList
+
+        guard let firstVideo = dataList.first else {
             throw VideoError.noVideosAvailable
         }
 
-        return oldestVideoObject
+        return firstVideo
+    }
+
+    func goToPreviousVideo() {
+        if selectedVideoIndex > 0 {
+            selectedVideoIndex -= 1
+        }
+
+        selectedVideoData = videoList[selectedVideoIndex]
+    }
+
+    func goToNextVideo() {
+        if selectedVideoIndex < videoList.count - 1 {
+            selectedVideoIndex += 1
+        }
+
+        selectedVideoData = videoList[selectedVideoIndex]
+    }
+
+    func canGoToPrevious() -> Bool {
+        return selectedVideoIndex > 0
+    }
+
+    func canGoToNext() -> Bool {
+        return selectedVideoIndex < videoList.count - 1
     }
 }

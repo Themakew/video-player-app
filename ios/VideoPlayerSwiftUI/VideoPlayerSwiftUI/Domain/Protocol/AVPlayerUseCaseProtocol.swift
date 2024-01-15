@@ -13,4 +13,5 @@ protocol AVPlayerUseCaseProtocol {
 
     func updatePlayerURL(_ url: URL)
     func togglePlayPause()
+    func pausePlayer()
 }
