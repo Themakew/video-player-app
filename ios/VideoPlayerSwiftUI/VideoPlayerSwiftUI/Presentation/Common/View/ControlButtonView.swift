@@ -80,3 +80,6 @@ struct ControlButtonView: View {
     }
 }
 
+#Preview {
+    ControlButtonView(defaultButtonIconName: "play") {}
+}

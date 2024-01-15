@@ -35,6 +35,9 @@ struct HomeView: View {
             VideoPlayerView(player: viewModel.player)
                 .frame(height: geometry.size.height * 0.3)
                 .background(.black)
+                .onTapGesture {
+                    viewModel.toggleControlsVisibility()
+                }
                 .overlay(
                     videoControls()
                 )
@@ -53,7 +56,7 @@ struct HomeView: View {
                 isEnabled: $viewModel.isPreviousButtonDisabled,
                 defaultButtonIconName: "previous"
             ) {
-                // TODO
+                viewModel.goToPreviousVideo()
             }
 
             ControlButtonView(
@@ -69,9 +72,11 @@ struct HomeView: View {
                 isEnabled: $viewModel.isNextButtonDisabled,
                 defaultButtonIconName: "next"
             ) {
-                // TODO
+                viewModel.goToNextVideo()
             }
         }
+        .opacity(viewModel.isControlButtonsDisabled ? 0 : 1)
+        .disabled(viewModel.isControlButtonsDisabled)
     }
 
     private func detailView(

@@ -18,6 +18,9 @@ protocol HomeViewModelProtocol {
 
     func loadData() async
     func togglePlayPause()
+    func goToPreviousVideo()
+    func goToNextVideo()
+    func toggleControlsVisibility()
 }
 
 @Observable final class HomeViewModel: HomeViewModelProtocol {
@@ -71,6 +74,10 @@ protocol HomeViewModelProtocol {
 
         currentVideoData = videoUseCase.selectedVideoData
         refreshScreen()
+    }
+
+    func toggleControlsVisibility() {
+        isControlButtonsDisabled.toggle()
     }
 
     private func refreshScreen() {

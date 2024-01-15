@@ -58,3 +58,8 @@ final class PlayerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+#Preview {
+    VideoPlayerView(player: AVPlayer())
+        .frame(height: 300)
+}
