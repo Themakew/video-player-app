@@ -29,7 +29,7 @@ Architecture used was MVVM, with some elements of Clean Architecture. Strong ref
 
 Due the timebox and the requirenment set for the assessment, was not done the implementation of important UX aspects: layout for the loading and error states. 
 
-In order to serve as a reference, according to my dissertation related to mobile usability (<a href="https://www.researchgate.net/publication/333106215_Set_of_Usability_Heuristics_for_Quality_Assessment_of_Mobile_Applications_on_Smartphones">Link.</a></p>), the heuristic "Visibility of System Status", "The application should keep the user informed about all processes and state changes within a reasonable period of time".
+In order to serve as a reference, according to my dissertation related to mobile usability (<a href="https://www.researchgate.net/publication/333106215_Set_of_Usability_Heuristics_for_Quality_Assessment_of_Mobile_Applications_on_Smartphones">Link</a>), the heuristic "Visibility of System Status", "The application should keep the user informed about all processes and state changes within a reasonable period of time".
 
 ## How to run the project?
 
